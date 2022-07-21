@@ -1,0 +1,4 @@
+.ipynb_checkpoints
+*.pyc
+__pycache__/
+data/experiments/bloom_rbd_escape/escape_data_20220109.csv
