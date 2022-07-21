@@ -16,7 +16,7 @@ The components are then standardized and fed into a temperature scaled logistic 
 We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all PANGO lineages in our paper, and EVEscape rankings of newly occurring GISAID ranking and visualization of likely future mutations will be available at evescape.org. 
 
 ## Example scripts
-The scripts folder contains python scripts to calculate EVEscape scores for all single mutations and aggregate deep mutational scanning data for SARS-CoV-2 RBD, Flu HA, and HIV Env from [./data]. 
+The scripts folder contains python scripts to calculate EVEscape scores for all single mutations and aggregate deep mutational scanning data for SARS-CoV-2 RBD, Flu HA, and HIV Env from [data](/data). 
 Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
