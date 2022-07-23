@@ -1,6 +1,6 @@
 # EVEscape
 
-This is the official code repository for the paper "Learning from pre-pandemic data to forecast viral antibody escape" (). This paper is a joint collaboration between the Marks lab (https://www.deboramarkslab.com/) and the OATML group (https://oatml.cs.ox.ac.uk/).
+This is the official code repository for the paper "Learning from pre-pandemic data to forecast viral antibody escape" (https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1). This paper is a joint collaboration between the Marks lab (https://www.deboramarkslab.com/) and the OATML group (https://oatml.cs.ox.ac.uk/).
 
 ## Overview
 EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.     
@@ -35,5 +35,5 @@ Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins
 (* equal contribution)
 
 Links:
- - Pre-print: 
+ - Pre-print: https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1
  - Website: evescape.org
