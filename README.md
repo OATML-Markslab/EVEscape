@@ -1,6 +1,6 @@
 # EVEscape
 
-This is the official code repository for the paper "Learning from pre-pandemic data to forecast viral antibody escape" (https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1). This paper is a joint collaboration between the Marks lab (https://www.deboramarkslab.com/) and the OATML group (https://oatml.cs.ox.ac.uk/).
+This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral antibody escape"](https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
 
 ## Overview
 EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.     
@@ -13,7 +13,7 @@ Computing EVEscape scores consists of three components:
 
 The components are then standardized and fed into a temperature scaled logistic function, and we take the the log transform of the product of the 3 terms to obtain final EVEscape scores. 
 
-We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all PANGO lineages in our paper, and EVEscape rankings of newly occurring GISAID ranking and visualization of likely future mutations will be available at evescape.org. 
+We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all PANGO lineages in our paper, and EVEscape rankings of newly occurring GISAID strains and visualization of likely future mutations will be available at evescape.org. 
 
 ## Example scripts
 The scripts folder contains python scripts to calculate EVEscape scores for all single mutations and aggregate deep mutational scanning data for SARS-CoV-2 RBD, Flu HA, and HIV Env from [data](/data). 
@@ -23,6 +23,16 @@ Specifically this includes the following two scripts:
 
 ## Data requirements
 The data required to obtain EVEscape scores is one or multiple PDB files and EVE scores (see [EVE repo](https://github.com/OATML-Markslab/EVE) for how to generate) and a fasta file of the wildtype sequence for the viral protein of interest. 
+
+MSAs to create EVE models used in this project can be found in the supplemental material of the paper. 
+
+To download the RBD escape data used in this project (~120MB unzipped):
+```
+curl -o escape_dms_data_20220109.zip https://marks.hms.harvard.edu/evescape/escape_dms_data_20220109.zip
+unzip escape_dms_data_20220109.zip
+rm escape_dms_data_20220109.zip
+```
+(originally downloaded from [SARS2_RBD_Ab_escape_maps](https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps))
 
 ## License
 This project is available under the MIT license. 
@@ -36,4 +46,4 @@ Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins
 
 Links:
  - Pre-print: https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1
- - Website: evescape.org
+ - Website: https://www.evescape.org/
