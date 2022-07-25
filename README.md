@@ -22,9 +22,7 @@ Specifically this includes the following two scripts:
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
 
 ## Data requirements
-The data required to obtain EVEscape scores is one or multiple PDB files and EVE scores (see [EVE repo](https://github.com/OATML-Markslab/EVE) for how to generate) and a fasta file of the wildtype sequence for the viral protein of interest. 
-
-MSAs to create EVE models used in this project can be found in the supplemental material of the paper. 
+The data required to obtain EVEscape scores is one or multiple PDB files, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
 
 To download the RBD escape data used in this project (~120MB unzipped):
 ```
@@ -33,6 +31,22 @@ unzip escape_dms_data_20220109.zip
 rm escape_dms_data_20220109.zip
 ```
 (originally downloaded from [SARS2_RBD_Ab_escape_maps](https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps))
+
+## Generating EVE scores
+We leverage the original [EVE codebase](https://github.com/OATML-Markslab/EVE) to compute the evolutionary indices used in EVEscape.
+
+### Model training
+The MSAs used to train the EVE models used in this project can be found in the supplemental material of the paper (Data S1). 
+
+We modify the Bayesian VAE [training script](https://github.com/OATML-Markslab/EVE/blob/master/train_VAE.py) to support the following hyperparameter choices in the [MSA_processing](https://github.com/OATML-Markslab/EVE/blob/master/utils/data_utils.py) call:
+- sequence re-weighting in MSA (theta): we choose a value of 0.01 that is better suited to viruses (Hopf et al., Riesselman et al.)
+- fragment filtering (threshold_sequence_frac_gaps): we keep sequences in the MSA that align to at least 50% of the target sequence.
+- position filtering (threshold_focus_cols_frac_gaps): we keep columns with at least 70% coverage, except for SARS-CoV-2 Spike for which we lower the required value to 30% in order to maximally cover experimental positions and significant pandemic sites.
+
+We train 5 independent models with different random seeds.
+
+### Model scoring
+For the 5 independently-trained models, we compute [evolutionary indices](https://github.com/OATML-Markslab/EVE/blob/master/compute_evol_indices.py) sampling 20k times from the approximate posterior distribution (ie., num_samples_compute_evol_indices=20000). We then average the resulting scores across the 5 models to obtain the final EVE scores used in EVEscape.
 
 ## License
 This project is available under the MIT license. 
