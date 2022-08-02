@@ -1,0 +1,339 @@
+,condition,condition_type,condition_subtype,condition_year,eliciting_virus,study,lab
+0,escape_BD-739_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+4020,escape_BRII-196_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+8040,escape_C093_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+12060,escape_COVOX-150_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+16080,escape_BD-822_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+20100,escape_BD-715_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+24120,escape_COVA2-04_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+28140,escape_CV30_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+32160,escape_BD-503_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+36180,escape_BD55-1374_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+40200,escape_BD55-1789_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+44220,escape_BD-693_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+48240,escape_BD-694_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+52260,escape_C105_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+56280,escape_C1A-B12_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+60300,escape_C1A-B3_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+64320,escape_C1A-C2_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+68340,escape_C1A-F10_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+72360,escape_LY-CoV016_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+76380,escape_CC12.1_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+80400,escape_CC12.3_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+84420,escape_COV2-2807_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+88440,escape_DH1154_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+92460,escape_DH1179_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+96480,escape_DH1210_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+100500,escape_LY-CoV481_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+104520,escape_LY-CoV488_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+108540,escape_P2B-1A10_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+112560,escape_P4A1_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+116580,escape_P5A-3A1_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+120600,escape_B38_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+124620,escape_BD-236_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+128640,escape_BD-498_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+132660,escape_BD-500_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+136680,escape_BD-508_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+140700,escape_BD-598_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+144720,escape_BD-599_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+148740,escape_BD-605_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+152760,escape_BD-619_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+156780,escape_BD-915_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+160800,escape_BD-930_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+164820,escape_C102_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+168840,escape_C578_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+172860,escape_COV2-2113_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+176880,escape_COV2-2589_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+180900,escape_COV2-2919_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+184920,escape_COVOX-269_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+188940,escape_COVOX-88_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+192960,escape_DH1126_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+196980,escape_DH1140_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+201000,escape_Ehling_mAb-64_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+205020,escape_P5A-2G9_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+209040,escape_BD-504_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+213060,escape_BD-616_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+217080,escape_BD55-1763_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+221100,escape_COV2-2308_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+225120,escape_COV2-2098_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+229140,escape_BD-612_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+233160,escape_WIBP-2B11_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+237180,escape_BD-614_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+241200,escape_COVOX-222_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+245220,escape_BD-618_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+249240,escape_BD55-5293_Xie,antibody,class 1,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+253260,escape_DXP-604_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+257280,escape_BD-369_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+261300,escape_BG4-25_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+265320,escape_COVOX-253H165L_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+269340,escape_CV07-287_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+273360,escape_C597_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+277380,escape_CA521_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+281400,escape_REGN10933_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+285420,escape_BD-319_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+289440,escape_BD-833_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+293460,escape_COV2-2684_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+297480,escape_CV07-209_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+301500,escape_CV-X2-106_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+305520,escape_BD-922_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+309540,escape_15033_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+313560,escape_BD-417_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+317580,escape_BD55-1508_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+321600,escape_BD-805_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+325620,escape_BG1-24_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+329640,escape_C083_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+333660,escape_COV2-2941_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+337680,escape_BD-623_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+341700,escape_COV2-2196_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+345720,escape_COV2-2072_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+349740,escape_BD-836_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+353760,escape_COV2-2381_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+357780,escape_S2E12_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+361800,escape_COVOX-253H55L_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+365820,escape_BD-566_Xie,antibody,class 1,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+369840,escape_BG10-19_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+373860,escape_BD55-1274_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+377880,escape_COV2-2353_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+381900,escape_BD55-1694_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+385920,escape_C002_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+389940,escape_P17_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+393960,escape_2-15_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+397980,escape_BD-254_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+402000,escape_BD-362_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+406020,escape_BD-368_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+410040,escape_BD-397_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+414060,escape_BD-403_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+418080,escape_DXP-593_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+422100,escape_BD55-1579_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+426120,escape_BD-791_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+430140,escape_BD-870_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+434160,escape_BD55-4382_Xie,antibody,class 2,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+438180,escape_BG7-20_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+442200,escape_C591_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+446220,escape_CM32_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+450240,escape_COV2-2064_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+454260,escape_COV2-2504_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+458280,escape_COV2-2539_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+462300,escape_COVA2-39_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+466320,escape_COVOX-316_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+470340,escape_COVOX-384_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+474360,escape_CV05-163_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+478380,escape_CV07-255_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+482400,escape_DH1173_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+486420,escape_DH1184_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+490440,escape_H4_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+494460,escape_P2B-2F6_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+498480,escape_P2C-1A3_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+502500,escape_S2H13_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+506520,escape_S2M11_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+510540,escape_BD-790_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+514560,escape_C058_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+518580,escape_COV2-2391_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+522600,escape_COV2-2479_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+526620,escape_COV2-2955_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+530640,escape_CV07-200_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+534660,escape_CV07-222_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+538680,escape_CV07-262_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+542700,escape_CV07-283_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+546720,escape_CV07-315_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+550740,escape_DH1041_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+554760,escape_DH1042_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+558780,escape_DH1043_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+562800,escape_DH1111_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+566820,escape_DH1159-2_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+570840,escape_DH1186_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+574860,escape_DH1214_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+578880,escape_LY-CoV555_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+582900,escape_BD-536_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+586920,escape_BD-900_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+590940,escape_C121_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+594960,escape_BD55-1962_Xie,antibody,class 2,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+598980,escape_1-57_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+603000,escape_BD-817_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+607020,escape_BG7-15_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+611040,escape_C119_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+615060,escape_COV2-2499_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+619080,escape_REGN10987_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+623100,escape_COVOX-75_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+627120,escape_COV2-2268_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+631140,escape_Ehling_mAb-50_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+635160,escape_TAU-2230_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+639180,escape_BD55-3457_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+643200,escape_BD-643_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+647220,escape_BD-918_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+651240,escape_COV2-2780_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+655260,escape_DH1160_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+659280,escape_DH1161-2_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+663300,escape_CV07-270_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+667320,escape_BD-864_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+671340,escape_BD-824_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+675360,escape_BD-812_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+679380,escape_BD-804_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+683400,escape_COV2-2130_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+687420,escape_LY-CoV1404_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+691440,escape_BD55-1706_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+695460,escape_BD55-387_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+699480,escape_BD55-1104_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+703500,escape_BD-467_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+707520,escape_DH1151_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+711540,escape_BD55-1403_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+715560,escape_BD55-3149_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+719580,escape_BD55-3433_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+723600,escape_BD55-3440_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+727620,escape_BD55-3451_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+731640,escape_BD55-4281_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+735660,escape_BD55-5382_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+739680,escape_BD55-3546_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+743700,escape_BD55-5195_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+747720,escape_BD55-5228_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+751740,escape_BD55-3637_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+755760,escape_BD55-4285_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+759780,escape_C110_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+763800,escape_BD-748_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+767820,escape_BD55-3152_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+771840,escape_BD-744_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+775860,escape_BD55-5386_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+779880,escape_BD-932_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+783900,escape_BD-914_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+787920,escape_BD-713_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+791940,escape_BD-796_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+795960,escape_BD-923_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+799980,escape_BD-907_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+804000,escape_S309_Xie,antibody,class 3,2021,SARS-CoV-1,2021_Cao_Omicron,Xie_XS
+808020,escape_BD55-5319_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+812040,escape_C576_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+816060,escape_DH1044_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+820080,escape_C581_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+824100,escape_C556_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+828120,escape_DH1193_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+832140,escape_BD-815_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+836160,escape_BD55-4325_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+840180,escape_COV2-2389_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+844200,escape_BD55-3525_Xie,antibody,class 3,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+848220,escape_BD55-1294_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+852240,escape_BD55-1831_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+856260,escape_BD-913_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+860280,escape_BD-692_Xie,antibody,class 3,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+864300,escape_BD55-3716_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+868320,escape_BD55-5233_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+872340,escape_BD55-5333_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+876360,escape_BD-702_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+880380,escape_C594_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+884400,escape_BD-449_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+888420,escape_BD-899_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+892440,escape_BD55-5170_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+896460,escape_BD55-5384_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+900480,escape_COV2-2015_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+904500,escape_COV2-2678_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+908520,escape_BD55-5276_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+912540,escape_BD55-5325_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+916560,escape_BD55-5365_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+920580,escape_S304_Xie,antibody,class 4,2021,SARS-CoV-1,2021_Cao_Omicron,Xie_XS
+924600,escape_COV2-2103_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+928620,escape_BD-494_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+932640,escape_BD55-5300_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+936660,escape_BD55-3372_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+940680,escape_BD55-3500_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+944700,escape_BD55-5339_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+948720,escape_BD55-1237_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+952740,escape_COVA1-16_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+956760,escape_BD-801_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+960780,escape_BD55-5259_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+964800,escape_COV2-2828_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+968820,escape_DH1047_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+972840,escape_BD55-5226_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+976860,escape_BD55-5267_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+980880,escape_BD-708_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+984900,escape_BD55-3304_Xie,antibody,class 4,2021,SARS-CoV-1 then SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+988920,escape_DH1045_Xie,antibody,class 4,2021,SARS-CoV-2,2021_Cao_Omicron,Xie_XS
+992940,escape_COV2-2196_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Dong_AZ,Bloom_JD
+994890,escape_COV2-2130_Bloom,antibody,class 3,2020,SARS-CoV-2,2021_Dong_AZ,Bloom_JD
+1014490,escape_COV2-2955_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Greaney_COV2-2955,Bloom_JD
+1016435,escape_CR3022_Bloom,antibody,class 4,2020,SARS-CoV-1,2021_Greaney_Crowe_Abs,Bloom_JD
+1018375,escape_COV2-2677_Bloom,antibody,class 4,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1020331,escape_COV2-2082_Bloom,antibody,class 4,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1022266,escape_COV2-2094_Bloom,antibody,class 4,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1024222,escape_COV2-2165_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1026157,escape_COV2-2832_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1028092,escape_COV2-2479_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1030032,escape_COV2-2050_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1031988,escape_COV2-2096_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1033941,escape_COV2-2499_Bloom,antibody,class 3,2020,SARS-CoV-2,2021_Greaney_Crowe_Abs,Bloom_JD
+1035897,escape_subject A (day 21)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1037843,escape_subject A (day 120)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1039786,escape_subject A (day 45)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1041732,escape_subject B (day 26)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1043678,escape_subject B (day 113)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1045621,escape_subject C (day 32)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1047567,escape_subject C (day 104)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1049512,escape_subject D (day 33)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1051460,escape_subject D (day 76)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1053405,escape_subject E (day 28)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1055351,escape_subject E (day 104)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1057296,escape_subject F (day 48)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1059239,escape_subject F (day 115)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1061182,escape_subject G (day 18)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1063130,escape_subject G (day 94)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1065078,escape_subject H (day 61)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1067024,escape_subject H (day 152)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1068970,escape_subject I (day 26)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1070913,escape_subject I (day 102)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1072856,escape_subject J (day 15)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1074804,escape_subject J (day 121)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1076747,escape_subject K (day 29)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1078693,escape_subject K (day 103)_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_HAARVI_sera,Bloom_JD
+1080638,escape_M01 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1082586,escape_M02 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1084532,escape_M03 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1086480,escape_M04 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1088428,escape_M05 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1090374,escape_M06 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1092322,escape_M07 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1094270,escape_M08 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1096216,escape_M09 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1098164,escape_M10 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1100110,escape_M11 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1102062,escape_M12 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1104008,escape_M13 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1105960,escape_M14 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1107912,escape_M16 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1109860,escape_M17 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1111808,escape_M18 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1113756,escape_M19 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1115704,escape_M20 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1117656,escape_M21 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1119608,escape_M22 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1121560,escape_M23 (day 119)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1123512,escape_M02 (day 36)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1125458,escape_M05 (day 36)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1127404,escape_M08 (day 36)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1129350,escape_M10 (day 36)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1131296,escape_M12 (day 36)_Bloom,serum,Moderna vaccine serum,2020,SARS-CoV-2,2021_Greaney_Moderna,Bloom_JD
+1133242,escape_COV-021_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1135192,escape_COV-047_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1137142,escape_COV-057_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1139092,escape_COV-072_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1141042,escape_COV-107_Bloom,serum,convalescent serum,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1142992,escape_C002_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1144942,escape_C105_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1146892,escape_C110_Bloom,antibody,class 3,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1148842,escape_C121_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1150792,escape_C135_Bloom,antibody,class 3,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1152742,escape_C144_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Greaney_Rockefeller,Bloom_JD
+1154692,escape_LY-CoV555_Bloom,antibody,class 2,2020,SARS-CoV-2,2021_Starr_LY-CoV555,Bloom_JD
+1156637,escape_REGN10933_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Starr_REGN,Bloom_JD
+1158585,escape_REGN10987_Bloom,antibody,class 3,2020,SARS-CoV-2,2021_Starr_REGN,Bloom_JD
+1160533,escape_LY-CoV016_Bloom,antibody,class 1,2020,SARS-CoV-2,2021_Starr_REGN,Bloom_JD
+1162481,escape_S309_Bloom,antibody,class 3,2021,SARS-CoV-1,2021_Starr_Vir,Bloom_JD
+1164432,escape_S2H97_Bloom,antibody,class 4,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1166383,escape_S304_Bloom,antibody,class 4,2021,SARS-CoV-1,2021_Starr_Vir,Bloom_JD
+1168334,escape_S2X35_Bloom,antibody,class 4,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1170285,escape_S2E12_Bloom,antibody,class 1,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1172236,escape_S2X16_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1174184,escape_S2H58_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1176132,escape_S2H13_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1178083,escape_S2D106_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1180031,escape_S2X58_Bloom,antibody,class 2,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1181982,escape_S2H14_Bloom,antibody,class 1,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1183933,escape_S2X227_Bloom,antibody,class 3,2021,SARS-CoV-2,2021_Starr_Vir,Bloom_JD
+1185881,escape_S2X259_Bloom,antibody,class 4,2021,SARS-CoV-2,2021_Tortorici_S2X259,Bloom_JD

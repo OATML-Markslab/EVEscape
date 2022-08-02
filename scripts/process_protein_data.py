@@ -12,7 +12,7 @@ from seq_utils import *
 
 # AA properties ()
 
-aa_charge_hydro = '../data/aa_properties/charge_hydro.csv'
+aa_charge_hydro = '../data/aa_properties/dissimilarity_metrics.csv'
 
 ##############################################
 # Flu Paths
@@ -54,7 +54,7 @@ bg505_structure_list = [{
     'chains': ['A', 'X'],
     'trimer_chains': ['A', 'B', 'C', 'X', 'Y', 'Z'],
     'pdb_path':
-    '../data/structures/5FYL_Env_trimer_rmTER.pdb'
+    '../data/structures/5FYL_Env_trimer.pdb'
 }, {
     'name': '7tfo',
     'chains': ['A', 'X'],
@@ -102,6 +102,12 @@ rbd_structure_list = [{
 }]
 
 rbd_target_seq_path = '../data/sequences/SPIKE_SARS2.fasta'
+
+## RBD metadata save paths ##
+
+bloom_ab_list = '../data/antibody_properties/Bloom_abs_to_use.txt'
+xie_ab_list = '../data/antibody_properties/Xie_abs_to_use.txt'
+rbd_ab_metadata = '../data/antibody_properties/rbd_antibody_metadata.csv'
 
 ##############################################
 # SARS2 Spike Paths
@@ -201,6 +207,22 @@ def norm_to_wt(df, prefvar):
     df[newvar] = df[prefvar]
     df = df.groupby(['i', 'wt']).apply(grp_func)
     return df
+
+def rbd_metadata(escape_df, bloom_path, xie_path, metadata_path):
+    escape = escape_df[['condition','condition_type',
+                        'condition_subtype','condition_year',
+                        'eliciting_virus','study',
+                        'lab']].drop_duplicates()
+    with open(xie_path, "w") as textfile:
+        for element in escape[
+                          (escape.lab=='Xie_XS')].condition.tolist():
+            textfile.write(element + "\n")
+    with open(bloom_path, "w") as textfile:
+        for element in escape[
+                          (escape.lab=='Bloom_JD')].condition.tolist():
+            textfile.write(element + "\n")
+    escape.to_csv(metadata_path)
+    return(escape)
 
 
 ##############################################
@@ -315,7 +337,9 @@ def load_rbd():
     escape = escape[~escape.study.isin(rbd_studies_to_drop)]
     escape['condition'] = ('escape_' + escape['condition'] + '_' +
                            escape['lab'].str.split('_').str[0])
-
+    
+    _ = rbd_metadata(escape, bloom_ab_list, xie_ab_list, rbd_ab_metadata)
+    
     escape = escape[[
         'condition', 'site', 'wildtype', 'mutation', 'mut_escape'
     ]]
