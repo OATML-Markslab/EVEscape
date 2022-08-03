@@ -21,7 +21,7 @@ Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
  
-The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [EVEscape_summary.pdf](./EVEscape_summary.pdf). 
+The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [evescape_summary.pdf](./evescape_summary.pdf). Additional data tables are available in the paper supplement. 
 
 ## Data requirements
 The data required to obtain EVEscape scores is one or multiple PDB files, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
