@@ -3,7 +3,7 @@
 This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral antibody escape"](https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
 
 ## Overview
-EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.     
+EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.   
 
 ## Usage
 Computing EVEscape scores consists of three components:
@@ -15,11 +15,13 @@ The components are then standardized and fed into a temperature scaled logistic 
 
 We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all PANGO lineages in our paper, and EVEscape rankings of newly occurring GISAID strains and visualization of likely future mutations will be available at evescape.org. 
 
-## Example scripts
+## Scripts
 The scripts folder contains python scripts to calculate EVEscape scores for all single mutations and aggregate deep mutational scanning data for SARS-CoV-2 RBD, Flu HA, and HIV Env from [data](/data). 
 Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
+ 
+The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [EVEscape_summary.pdf](./EVEscape_summary.pdf). 
 
 ## Data requirements
 The data required to obtain EVEscape scores is one or multiple PDB files, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 

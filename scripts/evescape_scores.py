@@ -163,3 +163,31 @@ rbd_all.to_csv("../results/summaries_with_scores/spike_rbd_evescape.csv",
                index=False)
 spike.to_csv("../results/summaries_with_scores/full_spike_evescape.csv",
              index=False)
+
+
+##############################################
+#Save Site-Level Summaries with EVEscape/binarized experimetnal escape
+##############################################
+def make_site(summary_init):
+
+    summary = summary_init.copy()
+    summary = summary.groupby(['wt', 'i']).agg('mean').reset_index()
+
+    return (summary)
+
+
+flu_site = make_site(flu)
+hiv_site = make_site(hiv)
+rbd_all_site = make_site(rbd_all)
+spike_site = make_site(spike)
+
+flu_site.to_csv('../results/summaries_with_scores/flu_h1_evescape_sites.csv',
+                index=False)
+hiv_site.to_csv('../results/summaries_with_scores/hiv_env_evescape_sites.csv',
+                index=False)
+rbd_all_site.to_csv(
+    '../results/summaries_with_scores/spike_rbd_evescape_sites.csv',
+    index=False)
+spike_site.to_csv(
+    '../results/summaries_with_scores/full_spike_evescape_sites.csv',
+    index=False)

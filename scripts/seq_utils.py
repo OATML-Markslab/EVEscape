@@ -14,6 +14,75 @@ from Bio.PDB import is_aa
 
 alphabet = "ACDEFGHIKLMNPQRSTVWY"
 
+Codon_AA = {
+    "TTT": "F",
+    "TTC": "F",
+    "TTA": "L",
+    "TTG": "L",
+    "TCT": "S",
+    "TCC": "S",
+    "TCA": "S",
+    "TCG": "S",
+    "TAT": "Y",
+    "TAC": "Y",
+    "TAA": "stop",
+    "TAG": "stop",
+    "TGT": "C",
+    "TGC": "C",
+    "TGG": "W",
+    "TGA": "stop",
+    "CTT": "L",
+    "CTC": "L",
+    "CTA": "L",
+    "CTG": "L",
+    "CCT": "P",
+    "CCC": "P",
+    "CCA": "P",
+    "CCG": "P",
+    "CAT": "H",
+    "CAC": "H",
+    "CAA": "Q",
+    "CAG": "Q",
+    "CGT": "R",
+    "CGC": "R",
+    "CGA": "R",
+    "CGG": "R",
+    "ATT": "I",
+    "ATC": "I",
+    "ATA": "I",
+    "ATG": "M",
+    "ACT": "T",
+    "ACC": "T",
+    "ACA": "T",
+    "ACG": "T",
+    "AAT": "N",
+    "AAC": "N",
+    "AAA": "K",
+    "AAG": "K",
+    "AGT": "S",
+    "AGC": "S",
+    "AGA": "R",
+    "AGG": "R",
+    "GTT": "V",
+    "GTC": "V",
+    "GTA": "V",
+    "GTG": "V",
+    "GCT": "A",
+    "GCC": "A",
+    "GCA": "A",
+    "GCG": "A",
+    "GAT": "D",
+    "GAC": "D",
+    "GAA": "E",
+    "GAG": "E",
+    "GGT": "G",
+    "GGC": "G",
+    "GGA": "G",
+    "GGG": "G"
+}
+
+AminoAcid = list(set(Codon_AA.values()))
+
 
 def fa_to_pd(filename):
     '''
@@ -164,3 +233,45 @@ def remap_struct_df_to_target_seq(struct_df, chainlist, map_table):
     struct_df = struct_df.rename(columns={'target_res': 'wt', 'target_i': 'i'})
 
     return (struct_df)
+
+
+def find_syn_codons(a, Codon_AA):
+    syn_cdns = []
+    for c in Codon_AA:
+        if Codon_AA[c] == a:
+            syn_cdns.append(c)
+    return (syn_cdns)
+
+
+def syn_cdn_dict(AminoAcid, Codon_AA):
+    AA_Codon = dict.fromkeys(AminoAcid)
+    for a in AminoAcid:
+        AA_Codon[a] = find_syn_codons(a, Codon_AA)
+    return (AA_Codon)
+
+
+def nuc_diff(source, target):
+    '''
+        Returns the number of nucleotide difference(s) between two codons.
+    '''
+    return sum([1 for i in range(len(source)) if source[i] != target[i]])
+
+
+def find_min_dist(cdn_a, cdn_b):
+    dists = [nuc_diff(c1, c2) for c2 in cdn_b for c1 in cdn_a]
+    return (min(dists))
+
+
+def create_min_dist_dictionary(AminoAcid, AA_Codon):
+    min_dist_dict = {}
+
+    for i in range(len(AminoAcid)):
+        for j in range(len(AminoAcid)):
+            a = AminoAcid[i]
+            b = AminoAcid[j]
+            cdn_a = AA_Codon[a]
+            cdn_b = AA_Codon[b]
+
+            min_dist = find_min_dist(cdn_a, cdn_b)
+            min_dist_dict[a + b] = min_dist
+    return (min_dist_dict)
