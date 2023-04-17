@@ -43,6 +43,13 @@ rbd_xie_ablist = [
 spike = pd.read_csv("../results/summaries/spike_scores.csv")
 rbd_all_ab = [col for col in rbd.columns.values if "escape_" in col]
 
+lassa = pd.read_csv('../results/summaries/lassa_glycoprotein_scores.csv')
+
+nipahg = pd.read_csv('../results/summaries/nipah_glycoprotein_scores.csv')
+
+nipahf = pd.read_csv('../results/summaries/nipah_fusion_scores.csv')
+
+
 ##############################################
 #Functions to calculate EVEscape and aggregate/binarize experiments
 ##############################################
@@ -126,6 +133,10 @@ hiv = make_predictors(hiv, hiv_thresh, hiv_ablist)
 rbd_bloom = make_predictors(rbd, rbd_thresh, rbd_ablist)
 rbd_xie = make_predictors(rbd, rbd_xie_thresh, rbd_xie_ablist)
 spike = make_predictors(spike, None, None, scores=False)
+lassa = make_predictors(lassa, None, None, scores=False)
+nipahg = make_predictors(nipahg, None, None, scores=False)
+nipahf = make_predictors(nipahf, None, None, scores=False)
+
 
 rbd_all = rbd_bloom.rename(
     columns={
@@ -163,6 +174,12 @@ rbd_all.to_csv("../results/summaries_with_scores/spike_rbd_evescape.csv",
                index=False)
 spike.to_csv("../results/summaries_with_scores/full_spike_evescape.csv",
              index=False)
+lassa.to_csv("../results/summaries_with_scores/lassa_glycoprotein_evescape.csv",
+             index=False)
+nipahg.to_csv("../results/summaries_with_scores/nipah_glycoprotein_evescape.csv",
+             index=False)
+nipahf.to_csv("../results/summaries_with_scores/nipah_fusion_evescape.csv",
+             index=False)
 
 
 ##############################################
@@ -171,7 +188,7 @@ spike.to_csv("../results/summaries_with_scores/full_spike_evescape.csv",
 def make_site(summary_init):
 
     summary = summary_init.copy()
-    summary = summary.groupby(['wt', 'i']).agg('mean').reset_index()
+    summary = summary.groupby(['i','wt']).agg('mean').reset_index()
 
     return (summary)
 
@@ -180,6 +197,10 @@ flu_site = make_site(flu)
 hiv_site = make_site(hiv)
 rbd_all_site = make_site(rbd_all)
 spike_site = make_site(spike)
+lassa_site = make_site(lassa)
+nipahg_site = make_site(nipahg)
+nipahf_site = make_site(nipahf)
+
 
 flu_site.to_csv('../results/summaries_with_scores/flu_h1_evescape_sites.csv',
                 index=False)
@@ -190,4 +211,13 @@ rbd_all_site.to_csv(
     index=False)
 spike_site.to_csv(
     '../results/summaries_with_scores/full_spike_evescape_sites.csv',
+    index=False)
+lassa_site.to_csv(
+    '../results/summaries_with_scores/lassa_glycoprotein_evescape_sites.csv',
+    index=False)
+nipahg_site.to_csv(
+    '../results/summaries_with_scores/nipah_glycoprotein_evescape_sites.csv',
+    index=False)
+nipahf_site.to_csv(
+    '../results/summaries_with_scores/nipah_fusion_evescape_sites.csv',
     index=False)

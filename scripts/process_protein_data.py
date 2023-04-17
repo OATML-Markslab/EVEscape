@@ -120,6 +120,54 @@ spike_experiment_range = (1, 1273)
 spike_eve_pre2020 = '../results/evol_indices/P0DTC2_sc0.5_cc0.3_b0.1_pre2020_evol_indices.csv'
 
 ##############################################
+# Lassavirus Paths
+##############################################
+
+# Models
+lassa_eve = '../results/evol_indices/GLYC_LASSJ_b0.05_theta_0.01_22oct14_20000_samples_No_distances_singles_22oct17.csv'
+
+# Structure data
+
+lassa_pdb_id = '7PUY'
+lassa_pdb_path = '../data/structures/7puy_no_hetatm.pdb'
+lassa_chains = ['A', 'a']
+lassa_trimer_chains = ['A', 'B', 'C', 'a', 'b', 'c']
+
+lassa_target_seq_path = '../data/sequences/GLYC_LASSJ.fasta'
+
+##############################################
+# Nipahvirus glycoprotein Paths
+##############################################
+
+# Models
+nipahg_eve = '../results/evol_indices/GLYCP_NIPAV_b0.05_theta_0.01_22oct14_20000_samples_No_distances_singles_22oct17.csv'
+
+# Structure data
+
+nipahg_pdb_id = 'combo'
+nipahg_pdb_path = '../data/structures/7tyo_7txz_no_hetatm.pdb'
+nipahg_chains = [['A'], ['B'], ['C'], ['D']]
+nipahg_multimer_chains = ['A', 'B', 'C', 'D']
+
+nipahg_target_seq_path = '../data/sequences/GLYCP_NIPAV.fasta'
+
+##############################################
+# Nipahvirus Fusion Paths
+##############################################
+
+# Models
+nipahf_eve = '../results/evol_indices/FUS_NIPAV_b0.05_theta_0.01_22oct14_20000_samples_No_distances_singles_22oct17.csv'
+
+# Structure data
+
+nipahf_pdb_id = '5EVM'
+nipahf_pdb_path = '../data/structures/5evm_no_hetatm.pdb'
+nipahf_chains = ['A']
+nipahf_trimer_chains = ['A', 'B', 'C']
+
+nipahf_target_seq_path = '../data/sequences/FUS_NIPAV.fasta'
+
+##############################################
 # Data Processing Functions
 ##############################################
 
@@ -482,6 +530,92 @@ def load_spike():
     return data, map_table_dict
 
 
+def load_lassa():
+    data = make_mut_table(lassa_target_seq_path)
+
+    # Read in and combine model data
+    data = add_model_outputs(data, lassa_eve)
+
+    # Get rid of wt data
+    data = data[data.wt != data.mut]
+
+    # Get mapping to PDB
+    map_table = remap_pdb_seq_to_target_seq(lassa_pdb_path, lassa_chains,
+                                            lassa_target_seq_path)
+
+    # Calculated weighted contact counts
+    data = get_wcn(data, lassa_pdb_path, lassa_trimer_chains, lassa_chains, map_table)
+
+    # Add aa properties to data
+    data = hydrophobicity_charge(data, aa_charge_hydro)
+    data = data.sort_values(['i', 'mut'])
+
+    return data, map_table
+
+
+def load_nipahg():
+    data = make_mut_table(nipahg_target_seq_path)
+
+    # Read in and combine model data
+    data = add_model_outputs(data, nipahg_eve)
+
+    # Get rid of wt data
+    data = data[data.wt != data.mut]
+
+    # Calculated weighted contact counts
+    map_table_dict = {}
+
+    for chain in nipahg_chains:
+
+        map_table = remap_pdb_seq_to_target_seq(nipahg_pdb_path,
+                                                chain,
+                                                nipahg_target_seq_path)
+
+        data = get_wcn(data, nipahg_pdb_path, nipahg_multimer_chains,
+                       chain, map_table)
+
+        data = data.rename(
+            columns={
+                'wcn_sc': 'wcn_sc_chain_' + ''.join(chain),
+                'wcn_fill': 'wcn_fill_chain_' + ''.join(chain)
+            })
+
+        map_table_dict[''.join(chain)] = map_table
+
+    # Take min of structures
+    data['wcn_fill'] = data[[
+        col for col in data.columns if 'wcn_fill_' in col
+    ]].min(axis=1)
+
+    # Add aa properties to data
+    data = hydrophobicity_charge(data, aa_charge_hydro)
+    data = data.sort_values(['i', 'mut'])
+
+    return data, map_table_dict
+
+
+def load_nipahf():
+    data = make_mut_table(nipahf_target_seq_path)
+
+    # Read in and combine pre-2020 model data
+    data = add_model_outputs(data, nipahf_eve)
+
+    # Get rid of wt data
+    data = data[data.wt != data.mut]
+
+    # Get mapping to PDB
+    map_table = remap_pdb_seq_to_target_seq(nipahf_pdb_path, nipahf_chains,
+                                            nipahf_target_seq_path)
+
+    # Calculated weighted contact counts
+    data = get_wcn(data, nipahf_pdb_path, nipahf_trimer_chains, nipahf_chains, map_table)
+
+    # Add aa properties to data
+    data = hydrophobicity_charge(data, aa_charge_hydro)
+    data = data.sort_values(['i', 'mut'])
+
+    return data, map_table
+
 h1, _ = load_H1()
 h1.to_csv('../results/summaries/h1_experiments_and_scores.csv', index=False)
 
@@ -494,3 +628,12 @@ rbd.to_csv('../results/summaries/rbd_experiments_and_scores.csv', index=False)
 
 spike, _ = load_spike()
 spike.to_csv('../results/summaries/spike_scores.csv', index=False)
+
+lassa, _ = load_lassa()
+lassa.to_csv('../results/summaries/lassa_glycoprotein_scores.csv', index=False)
+
+nipahg, _ = load_nipahg()
+nipahg.to_csv('../results/summaries/nipah_glycoprotein_scores.csv', index=False)
+
+nipahf, _ = load_nipahf()
+nipahf.to_csv('../results/summaries/nipah_fusion_scores.csv', index=False)
