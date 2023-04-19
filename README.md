@@ -53,7 +53,7 @@ We train 5 independent models with different random seeds.
 For the 5 independently-trained models, we compute [evolutionary indices](https://github.com/OATML-Markslab/EVE/blob/master/compute_evol_indices.py) sampling 20k times from the approximate posterior distribution (ie., num_samples_compute_evol_indices=20000). We then average the resulting scores across the 5 models to obtain the final EVE scores used in EVEscape.
 
 ## Software requirements
-The entire codebase is written in python. The corresponding environment may be created via conda and the provided [requirements.txt](./requirements.txt) file as follows:
+The entire codebase is written in python and requires Python>3.5. The corresponding environment may be created via conda and the provided [requirements.txt](./requirements.txt) file as follows:
 ```
 conda create --name evescape_env --file requirements.txt
 conda activate evescape_env
