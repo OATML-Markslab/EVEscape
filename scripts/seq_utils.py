@@ -3,8 +3,6 @@ from io import StringIO
 import os, io, random, glob
 import string
 import pandas as pd
-from evcouplings import align
-from evcouplings.compare.mapping import map_indices
 from Bio import pairwise2
 from Bio import SeqIO
 from Bio.Align import substitution_matrices
@@ -92,9 +90,10 @@ def fa_to_pd(filename):
     column_labels = ['header', 'Sequence']
     ali = []
 
-    with open(filename, 'r') as fileobj:
-        for seq_id, seq in align.alignment.read_fasta(fileobj):
-            ali.append([seq_id, seq])
+    fasta_sequences = SeqIO.parse(open(filename), 'fasta')
+    for fasta in fasta_sequences:
+        seq_id, seq = fasta.id, str(fasta.seq)
+        ali.append([seq_id, seq])
 
     ali = pd.DataFrame(ali, columns=column_labels)
     return ali
@@ -129,6 +128,65 @@ def pairwise_align(seq1, seq2):
     blosum62 = substitution_matrices.load("BLOSUM62")
     alignments = pairwise2.align.localds(seq1, seq2, blosum62, -10, -0.5)
     return (alignments[0][0], alignments[0][1])
+
+
+def map_indices(seq_i, start_i, end_i, seq_j, start_j, end_j, gaps=("-", ".")):
+    """
+    Compute index mapping between positions in two
+    aligned sequences
+    Taken from evcouplings (https://github.com/debbiemarkslab/EVcouplings)
+    Parameters
+    ----------
+    seq_i : str
+        First aligned sequence
+    start_i : int
+        Index of first position in first sequence
+    end_i : int
+        Index of last position in first sequence
+        (used for verification purposes only)
+    seq_j : str
+        Second aligned sequence
+    start_j : int
+        Index of first position in second sequence
+    end_j : int
+        Index of last position in second sequence
+        (used for verification purposes only)
+    Returns
+    -------
+    pandas.DataFrame
+        Mapping table containing assignment of
+        1. index in first sequence (i)
+        2. symbol in first sequence (A_i)
+        3. index in second sequence (j)
+        4. symbol in second sequence (A_j)
+    """
+    NA = np.nan
+    pos_i = start_i
+    pos_j = start_j
+    mapping = []
+
+    for i, (res_i, res_j) in enumerate(zip(seq_i, seq_j)):
+        # Do we match two residues, or residue and a gap?
+        # if matching two residues, store 1 to 1 mapping.
+        # Store positions as strings, since pandas cannot
+        # handle nan values in integer columns
+        if res_i not in gaps and res_j not in gaps:
+            mapping.append([str(pos_i), res_i, str(pos_j), res_j])
+        elif res_i not in gaps:
+            mapping.append([str(pos_i), res_i, NA, NA])
+        elif res_j not in gaps:
+            mapping.append([NA, NA, str(pos_j), res_j])
+
+        # adjust position in sequences if we saw a residue
+        if res_i not in gaps:
+            pos_i += 1
+
+        if res_j not in gaps:
+            pos_j += 1
+
+    assert pos_i - 1 == end_i and pos_j - 1 == end_j
+
+    return pd.DataFrame(mapping, columns=["i", "A_i", "j", "A_j"])
 
 
 def remap_to_target_seq(new_seq, target_seq):
