@@ -49,7 +49,6 @@ nipahg = pd.read_csv('../results/summaries/nipah_glycoprotein_scores.csv')
 
 nipahf = pd.read_csv('../results/summaries/nipah_fusion_scores.csv')
 
-
 ##############################################
 #Functions to calculate EVEscape and aggregate/binarize experiments
 ##############################################
@@ -122,6 +121,8 @@ def make_predictors(summary_init, thresh, ablist, scores=True):
             "charge_ew-hydro": "dissimilarity_charge_hydro"
         })
 
+    summary = summary.round(decimals=7)
+
     return (summary)
 
 
@@ -136,7 +137,6 @@ spike = make_predictors(spike, None, None, scores=False)
 lassa = make_predictors(lassa, None, None, scores=False)
 nipahg = make_predictors(nipahg, None, None, scores=False)
 nipahf = make_predictors(nipahf, None, None, scores=False)
-
 
 rbd_all = rbd_bloom.rename(
     columns={
@@ -174,12 +174,14 @@ rbd_all.to_csv("../results/summaries_with_scores/spike_rbd_evescape.csv",
                index=False)
 spike.to_csv("../results/summaries_with_scores/full_spike_evescape.csv",
              index=False)
-lassa.to_csv("../results/summaries_with_scores/lassa_glycoprotein_evescape.csv",
-             index=False)
-nipahg.to_csv("../results/summaries_with_scores/nipah_glycoprotein_evescape.csv",
-             index=False)
+lassa.to_csv(
+    "../results/summaries_with_scores/lassa_glycoprotein_evescape.csv",
+    index=False)
+nipahg.to_csv(
+    "../results/summaries_with_scores/nipah_glycoprotein_evescape.csv",
+    index=False)
 nipahf.to_csv("../results/summaries_with_scores/nipah_fusion_evescape.csv",
-             index=False)
+              index=False)
 
 
 ##############################################
@@ -188,7 +190,7 @@ nipahf.to_csv("../results/summaries_with_scores/nipah_fusion_evescape.csv",
 def make_site(summary_init):
 
     summary = summary_init.copy()
-    summary = summary.groupby(['i','wt']).agg('mean').reset_index()
+    summary = summary.groupby(['i', 'wt']).agg('mean').reset_index()
 
     return (summary)
 
@@ -200,7 +202,6 @@ spike_site = make_site(spike)
 lassa_site = make_site(lassa)
 nipahg_site = make_site(nipahg)
 nipahf_site = make_site(nipahf)
-
 
 flu_site.to_csv('../results/summaries_with_scores/flu_h1_evescape_sites.csv',
                 index=False)
