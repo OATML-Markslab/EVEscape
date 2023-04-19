@@ -59,7 +59,7 @@ conda create --name evescape_env --file requirements.txt
 conda activate evescape_env
 ```
 ## Runtime
-After collecting the training data, generating EVEscape scores for all single mutations runs in minutes. Strain scoring runs in 2 hours on 64G of memory. 
+After collecting the training data, generating EVEscape scores for all single mutations runs in minutes. Strain scoring of all GISAID strains runs in 2 hours on 64G of memory. 
 
 ## License
 This project is available under the MIT license. 
