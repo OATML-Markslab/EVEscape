@@ -1,0 +1,5 @@
+Run Summary:
+-------------------
+Total number of entries processed: 15208649
+Total number of unique sequences seen: 725146
+Total number of unique sequences seen more than 10 times: 41230

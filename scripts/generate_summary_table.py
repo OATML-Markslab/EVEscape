@@ -92,6 +92,21 @@ def process_gisaid_metadata(filepath, from_date, to_date):
             for i in range(len(chunk)):
                 entries_processed += 1
                 row = chunk.iloc[i]
+                # Only keep sequences with correct date formats
+                try:
+                    date = datetime.datetime.strptime(row['Submission date'],
+                                                      "%Y-%m-%d")
+                    col_date = datetime.datetime.strptime(
+                        row['Collection date'], "%Y-%m-%d")
+                except:
+                    non_conforming_dates_seen[row[
+                        'Submission date']] = non_conforming_dates_seen.get(
+                            row['Submission date'], 0) + 1
+                    continue
+
+                # Only keep sequences with that are submitted within 2 months of collection
+                if (date - col_date).days > 60:
+                    continue
                 if isinstance(row['AA Substitutions'], float) and math.isnan(
                         row['AA Substitutions']):
                     nans_seen['AA Substitutions'] = nans_seen.get(
@@ -106,35 +121,14 @@ def process_gisaid_metadata(filepath, from_date, to_date):
                         'count': 0,
                         'count_since_date': 0,
                         'accession_ids': [],
+                        'submission_dates': [],
                         'collection_dates': [],
                         'pango_lineages': [],
                         'pangolin_versions': [],
                         'nearest_VOCs': [],
+                        'location': [],
                     }
                 summary_row = summary_matrix[spike_mutations]
-
-                try:
-                    date = datetime.datetime.strptime(row['Collection date'],
-                                                      "%Y-%m-%d")
-                except ValueError:
-                    try:
-                        date = datetime.datetime.strptime(
-                            row['Collection date'], "%Y-%m")
-                        non_conforming_dates_seen[row[
-                            'Collection date']] = non_conforming_dates_seen.get(
-                                row['Collection date'], 0) + 1
-                    except ValueError:
-                        try:
-                            date = datetime.datetime.strptime(
-                                row['Collection date'], "%Y")
-                            non_conforming_dates_seen[row[
-                                'Collection date']] = non_conforming_dates_seen.get(
-                                    row['Collection date'], 0) + 1
-                        except ValueError:
-                            raise ValueError(
-                                f'Unable to convert {row["Collection date"]} to any date format.'
-                            )
-                            sys.exit(2)
 
                 # If this entry's date is after the period we care about, skip it.
                 if date > to_date:
@@ -145,7 +139,9 @@ def process_gisaid_metadata(filepath, from_date, to_date):
                     entries_since_date_processed += 1
                     summary_row['count_since_date'] += 1
 
-                summary_row['collection_dates'].append(row['Collection date'])
+                summary_row['submission_dates'].append(row['Submission date'])
+                summary_row["collection_dates"].append(row['Collection date'])
+                summary_row["location"].append(row['Location'])
 
                 # To deal with NaNs, always make sure the values are strings
                 if isinstance(row['Accession ID'], str):
@@ -155,26 +151,20 @@ def process_gisaid_metadata(filepath, from_date, to_date):
                     nans_seen['Accession ID'] = nans_seen.get(
                         'Accession ID', 0) + 1
 
-                if (isinstance(
-                        row['Pango lineage'],
-                        str)) and (row['Pango lineage']
-                                   not in summary_row['pango_lineages']):
+                if (isinstance(row['Pango lineage'], str)):
                     summary_row['pango_lineages'].append(row['Pango lineage'])
                 elif isinstance(row['Pango lineage'], float) and math.isnan(
                         row['Pango lineage']):
                     nans_seen['Pango lineage'] = nans_seen.get(
                         'Pango lineage', 0) + 1
 
-                if (isinstance(
-                        row['Pangolin version'],
-                        str)) and (row['Pangolin version']
-                                   not in summary_row['pangolin_versions']):
-                    summary_row['pangolin_versions'].append(
-                        row['Pangolin version'])
-                elif isinstance(row['Pangolin version'], float) and math.isnan(
-                        row['Pangolin version']):
-                    nans_seen['Pangolin version'] = nans_seen.get(
-                        'Pango lineage', 0) + 1
+
+#                 if (isinstance(row['Pangolin version'], str)) and (row['Pangolin version'] not in summary_row['pangolin_versions']):
+#                     summary_row['pangolin_versions'].append(
+#                         row['Pangolin version']
+#                     )
+#                 elif isinstance(row['Pangolin version'], float) and math.isnan(row['Pangolin version']):
+#                     nans_seen['Pangolin version'] = nans_seen.get('Pango lineage', 0) + 1
 
                 if ((isinstance(row['Variant'], str)) and
                     (row['Variant'] not in summary_row['nearest_VOCs'])):
@@ -183,20 +173,16 @@ def process_gisaid_metadata(filepath, from_date, to_date):
                         row['Variant']):
                     nans_seen['Variant'] = nans_seen.get('Variant', 0) + 1
 
-    new_sequences = {}
-    new_sequences_count = 0
     total_sequences_count = 0
     for k in summary_matrix:
         total_sequences_count += 1
         summary_row = summary_matrix[k]
-        summary_row['accession_ids'] = ','.join(
-            sorted(summary_row['accession_ids']))
-        summary_row['pango_lineages'] = ','.join(
-            sorted(summary_row['pango_lineages']))
+        summary_row['accession_ids'] = ','.join(summary_row['accession_ids'])
+        summary_row['pango_lineages'] = ','.join(summary_row['pango_lineages'])
         summary_row['pangolin_versions'] = ','.join(
-            sorted(summary_row['pangolin_versions']))
-        summary_row['nearest_VOCs'] = ','.join(
-            sorted(summary_row['nearest_VOCs']))
+            summary_row['pangolin_versions'])
+        summary_row['nearest_VOCs'] = ','.join(summary_row['nearest_VOCs'])
+        summary_row['location'] = ','.join(summary_row['location'])
         summary_row['proportion_since_date'] = (
             f'{(summary_row["count_since_date"]/entries_since_date_processed):.4f}'
         )
@@ -209,8 +195,8 @@ def process_gisaid_metadata(filepath, from_date, to_date):
         # 3. If there are no dates in YYYY-MM format, the earliest YYYY date.
         y_m_seen = False
         y_seen = False
-        collection_dates_sorted = sorted(summary_row['collection_dates'])
-        for date in collection_dates_sorted:
+        submission_dates_sorted = sorted(summary_row['submission_dates'])
+        for date in submission_dates_sorted:
             try:
                 date = datetime.datetime.strptime(date, "%Y-%m-%d")
                 summary_row['first_seen'] = date
@@ -224,33 +210,35 @@ def process_gisaid_metadata(filepath, from_date, to_date):
                         if not y_seen:
                             date = datetime.datetime.strptime(date, "%Y")
                             summary_row['first_seen'] = date
-        summary_row['collection_dates'] = ','.join(collection_dates_sorted)
+        summary_row['submission_dates'] = ','.join(
+            summary_row['submission_dates'])
+        summary_row['collection_dates'] = ','.join(
+            summary_row['collection_dates'])
 
         if not isinstance(summary_row['count'], int):
             summary_row['count'] = int(summary_row['count'])
         if not isinstance(summary_row['count_since_date'], int):
             summary_row['count_since_date'] = int(
                 summary_row['count_since_date'])
-        if summary_row['count'] == summary_row['count_since_date']:
-            new_sequences[k] = summary_row
-            new_sequences_count += 1
+    summary_matrix = pd.DataFrame.from_dict(summary_matrix).T
 
+    total_sequences_seen_10x = len(summary_matrix.query("count >10"))
     run_summary = (
         'Run Summary:\n'
         '-------------------\n'
         f'Total number of entries processed: {entries_processed}\n'
         f'Total number of unique sequences seen: {total_sequences_count}\n'
-        f'Number of new sequences seen between {from_date.date()} and {to_date.date()}: {new_sequences_count}\n'
-        f'Number of NaNs seen: {len(nans_seen)}\n'
-        f'Number of non-conforming dates seen: {sum([non_conforming_dates_seen[k] for k in non_conforming_dates_seen])}\n'
-        'Dict of NaNs seen:\n'
-        f'{json.dumps(nans_seen, sort_keys=True, indent=2)}\n'
-        'Dict of non-conforming dates seen:\n'
-        f'{json.dumps(non_conforming_dates_seen, sort_keys=True, indent=2)}\n')
+        f'Total number of unique sequences seen more than 10 times: {total_sequences_seen_10x}\n'
+        #         f'Number of NaNs seen: {len(nans_seen)}\n'
+        #         f'Number of non-conforming dates seen: {sum([non_conforming_dates_seen[k] for k in non_conforming_dates_seen])}\n'
+        #         'Dict of NaNs seen:\n'
+        #         f'{json.dumps(nans_seen, sort_keys=True, indent=2)}\n'
+        #         'Dict of non-conforming dates seen:\n'
+        #         f'{json.dumps(non_conforming_dates_seen, sort_keys=True, indent=2)}\n'
+    )
     print(run_summary)
-    return pd.DataFrame.from_dict(summary_matrix).T, pd.DataFrame.from_dict(
-        new_sequences).T, run_summary
 
+    return summary_matrix, run_summary
 
 if __name__ == "__main__":
     # Process options and arguments
@@ -309,11 +297,11 @@ if __name__ == "__main__":
     elif not filepath.endswith('.tsv'):
         sys.exit(f'Please provide a *.tsv file.')
 
-    summary_matrix, new_sequences, run_summary = process_gisaid_metadata(
+    summary_matrix, run_summary = process_gisaid_metadata(
         filepath, from_date, to_date)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    summary_matrix.to_csv(f'{output_dir}/summary_matrix.csv', index=False)
-    new_sequences.to_csv(f'{output_dir}/new_sequences.csv', index=False)
-    with open(f'{output_dir}/run_summary.txt', 'w') as f:
+    summary_matrix.to_csv(f'{output_dir}/GISAID_summary_matrix.csv',
+                          index=False)
+    with open(f'{output_dir}/GISAID_run_summary.txt', 'w') as f:
         f.write(run_summary)
