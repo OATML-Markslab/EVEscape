@@ -1,6 +1,6 @@
 # EVEscape
 
-This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral antibody escape"](https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
+This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral escape"](https://www.biorxiv.org/content/10.1101/2022.07.21.501023v2). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
 
 ## Overview
 EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.   
@@ -13,7 +13,7 @@ Computing EVEscape scores consists of three components:
 
 The components are then standardized and fed into a temperature scaled logistic function, and we take the the log transform of the product of the 3 terms to obtain final EVEscape scores. 
 
-We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all PANGO lineages in our paper, and EVEscape rankings of newly occurring GISAID strains and visualization of likely future mutations will be available at evescape.org. 
+We also provide EVEscape scores for all single mutation variants of SARS-CoV-2 Spike and aggregate strain-level predictions for all GISAID strains, and EVEscape rankings of newly occurring GISAID strains and visualization of likely future mutations will be available at evescape.org. 
 
 ## Scripts
 The scripts folder contains python scripts to calculate EVEscape scores for all single mutations and aggregate available deep mutational scanning data for SARS-CoV-2 RBD, Flu HA, HIV Env, Lassa glycoprotein, and Nipah fusion and glycoproteins from [data](/data). 
@@ -21,12 +21,14 @@ Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
  
+ The scripts folder also contains a python script [score_pandemic_strains.py](scripts/score_pandemic_strains.py) to calculate EVEscape scores for all strains in GISAID.
+ 
 The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [evescape_summary.pdf](./evescape_summary.pdf). Additional data tables are available in the paper supplement. 
 
 ## Data requirements
-The data required to obtain EVEscape scores is one or multiple PDB files, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
+The training data required to obtain EVEscape scores is one or multiple PDB files of the viral antigen, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
 
-To download the RBD escape data used in this project (~120MB unzipped):
+To download the RBD escape data used as validation data in this project (~120MB unzipped):
 ```
 curl -o escape_dms_data_20220109.zip https://marks.hms.harvard.edu/evescape/escape_dms_data_20220109.zip
 unzip escape_dms_data_20220109.zip
@@ -50,16 +52,25 @@ We train 5 independent models with different random seeds.
 ### Model scoring
 For the 5 independently-trained models, we compute [evolutionary indices](https://github.com/OATML-Markslab/EVE/blob/master/compute_evol_indices.py) sampling 20k times from the approximate posterior distribution (ie., num_samples_compute_evol_indices=20000). We then average the resulting scores across the 5 models to obtain the final EVE scores used in EVEscape.
 
+## Software requirements
+The entire codebase is written in python and requires a Python >= 3.5 installation. The corresponding environment may be created via conda and the provided [requirements.txt](./requirements.txt) file as follows:
+```
+conda create --name evescape_env --file requirements.txt
+conda activate evescape_env
+```
+## Runtime
+After collecting the training data, generating EVEscape scores for all single mutations runs in minutes. Strain scoring of all GISAID strains runs in 2 hours on 64G of memory. 
+
 ## License
 This project is available under the MIT license. 
 
 ## Reference
 If you use this code, please cite the following paper:
 
-Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins, Chris Sander, Yarin Gal, Debora S. Marks. Learning from pre-pandemic data to forecast viral antibody escape. BioRxiv. 2022. 
+Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins, Chris Sander, Yarin Gal, Debora S. Marks. Learning from pre-pandemic data to forecast viral escape. BioRxiv. 2023. 
 
 (* equal contribution)
 
 Links:
- - Pre-print: https://www.biorxiv.org/content/10.1101/2022.07.21.501023v1
+ - Pre-print: https://www.biorxiv.org/content/10.1101/2022.07.21.501023v2
  - Website: https://www.evescape.org/
