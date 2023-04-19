@@ -21,12 +21,14 @@ Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
  
+ The scripts folder also contains a python script [score_pandemic_strains.py](scripts/score_pandemic_strains.py) to calculate EVEscape scores for all strains in GISAID.
+ 
 The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [evescape_summary.pdf](./evescape_summary.pdf). Additional data tables are available in the paper supplement. 
 
 ## Data requirements
-The data required to obtain EVEscape scores is one or multiple PDB files, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
+The training data required to obtain EVEscape scores is one or multiple PDB files of the viral antigen, EVE scores (see next subsection) and a fasta file of the wildtype sequence for the viral protein of interest. 
 
-To download the RBD escape data used in this project (~120MB unzipped):
+To download the RBD escape data used as validation data in this project (~120MB unzipped):
 ```
 curl -o escape_dms_data_20220109.zip https://marks.hms.harvard.edu/evescape/escape_dms_data_20220109.zip
 unzip escape_dms_data_20220109.zip
@@ -56,6 +58,8 @@ The entire codebase is written in python. The corresponding environment may be c
 conda create --name evescape_env --file requirements.txt
 conda activate evescape_env
 ```
+## Runtime
+After collecting the training data, generating EVEscape scores for all single mutations runs in minutes. Strain scoring runs in 2 hours on 64G of memory. 
 
 ## License
 This project is available under the MIT license. 
