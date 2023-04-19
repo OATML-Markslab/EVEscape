@@ -52,7 +52,7 @@ For the 5 independently-trained models, we compute [evolutionary indices](https:
 
 ## Software requirements
 The entire codebase is written in python. Package requirements are as follows:
--python=
+- python=
 
 The corresponding environment may be created via conda and the provided evescape_env.yml file as follows:
 '''
