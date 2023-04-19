@@ -5,6 +5,7 @@ joblib==1.1.0
 kiwisolver==1.4.4
 matplotlib==3.5.2
 numpy==1.23.1
+openpyxl==3.0.7 
 packaging==21.3
 pandas==1.4.3
 Pillow==9.2.0
