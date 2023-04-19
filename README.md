@@ -58,7 +58,6 @@ The entire codebase is written in python. The corresponding environment may be c
 conda config --add channels conda-forge
 conda create --name evescape_env --file requirements.txt
 conda activate evescape_env
-pip install evcouplings
 ```
 The environment installs in minutes.
 
