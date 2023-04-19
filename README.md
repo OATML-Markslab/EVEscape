@@ -21,8 +21,12 @@ Specifically this includes the following two scripts:
  - [process_protein_data.py](scripts/process_protein_data.py) calculates the three EVEscape components 
  - [evescape_scores.py](scripts/evescape_scores.py) creates the final evescape scores and outputs scores and processed DMS data in [summaries_with_scores](./results/summaries_with_scores)
  
- The scripts folder also contains a python script [score_pandemic_strains.py](scripts/score_pandemic_strains.py) to calculate EVEscape scores for all strains in GISAID.
- 
+ The scripts folder also contains a python script [score_pandemic_strains.py](scripts/score_pandemic_strains.py) to calculate EVEscape scores for all strains in GISAID. The output strain scores can be downloaded as follows:
+ ```
+curl -o strain_scores_20230318.zip https://marks.hms.harvard.edu/evescape/strain_scores_20230318.zip
+unzip strain_scores_20230318.zip
+rm strain_scores_20230318.zip
+```
 The workflow of the scripts to create the data tables in [results](./results) needed for the main figures of the EVEscape paper is available in [evescape_summary.pdf](./evescape_summary.pdf). Additional data tables are available in the paper supplement. 
 
 ## Data requirements
