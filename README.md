@@ -55,10 +55,10 @@ The entire codebase is written in python. Package requirements are as follows:
 - python=
 
 The corresponding environment may be created via conda and the provided evescape_env.yml file as follows:
-'''
+```
 conda env create -f evescape_env.yml
 conda activate evescape_env
-'''
+```
 
 ## License
 This project is available under the MIT license. 
