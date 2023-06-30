@@ -134,6 +134,8 @@ lassa_chains = ['A', 'a']
 lassa_trimer_chains = ['A', 'B', 'C', 'a', 'b', 'c']
 
 lassa_target_seq_path = '../data/sequences/GLYC_LASSJ.fasta'
+lassa_experiment_range = (59, 491) #signal peptide is 1-58
+
 
 ##############################################
 # Nipahvirus glycoprotein Paths
@@ -549,6 +551,10 @@ def load_lassa():
     # Add aa properties to data
     data = hydrophobicity_charge(data, aa_charge_hydro)
     data = data.sort_values(['i', 'mut'])
+
+    # Drop any rows not in experiment
+    data = data[(data.i >= lassa_experiment_range[0])
+                & (data.i <= lassa_experiment_range[1])]
 
     return data, map_table
 
