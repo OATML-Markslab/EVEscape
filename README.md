@@ -56,6 +56,23 @@ We train 5 independent models with different random seeds.
 ### Model scoring
 For the 5 independently-trained models, we compute [evolutionary indices](https://github.com/OATML-Markslab/EVE/blob/master/compute_evol_indices.py) sampling 20k times from the approximate posterior distribution (ie., num_samples_compute_evol_indices=20000). We then average the resulting scores across the 5 models to obtain the final EVE scores used in EVEscape.
 
+### Model checkpoints
+We provide open access to the EVE models we trained for the various viruses discussed in the paper. These model checkpoints were obtained following the training procedure described above. To download checkpoints for a viral protein of interest, please adapt the following example with the relevant filename (filenames are listed in the table underneath).
+```
+curl -o EVE_checkpoints_I4EPC4.zip https://marks.hms.harvard.edu/evescape/EVE_checkpoints_I4EPC4.zip
+unzip EVE_checkpoints_I4EPC4.zip
+rm EVE_checkpoints_I4EPC4.zip
+```
+| Viral protein     | Filename          |
+| :---------------- | :---------------- |
+| I4EPC4            | EVE_checkpoints_I4EPC4.zip |
+| P0DTC2 (pre2020 sequences only)            | EVE_checkpoints_P0DTC2_full_pre2020.zip |
+| P0DTC2            | EVE_checkpoints_P0DTC2_full.zip |
+| Q2N0S5            | EVE_checkpoints_Q2N0S5.zip |
+| FUS_NIPAV            | EVE_checkpoints_FUS_NIPAV.zip |
+| GLYC_LASSJ            | EVE_checkpoints_GLYC_LASSJ.zip |
+| GLYCP_NIPAV            | EVE_checkpoints_GLYCP_NIPAV.zip |
+
 ## Software requirements
 The entire codebase is written in python. The corresponding environment may be created via conda and the provided [requirements.txt](./requirements.txt) file as follows:
 ```
