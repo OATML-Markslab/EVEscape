@@ -63,15 +63,16 @@ curl -o EVE_checkpoints_I4EPC4.zip https://marks.hms.harvard.edu/evescape/EVE_ch
 unzip EVE_checkpoints_I4EPC4.zip
 rm EVE_checkpoints_I4EPC4.zip
 ```
-| Viral protein     | Filename          |
-| :---------------- | :---------------- |
-| I4EPC4            | EVE_checkpoints_I4EPC4.zip |
-| P0DTC2 (pre2020 sequences only)            | EVE_checkpoints_P0DTC2_full_pre2020.zip |
-| P0DTC2            | EVE_checkpoints_P0DTC2_full.zip |
-| Q2N0S5            | EVE_checkpoints_Q2N0S5.zip |
-| FUS_NIPAV            | EVE_checkpoints_FUS_NIPAV.zip |
-| GLYC_LASSJ            | EVE_checkpoints_GLYC_LASSJ.zip |
-| GLYCP_NIPAV            | EVE_checkpoints_GLYCP_NIPAV.zip |
+| Uniprot ID     | Organism          | Protein name         | Filename          |
+| :---------------- | :---------------- | :---------------- | :---------------- | 
+| I4EPC4            |Influenza A virus   | Hemagglutinin   | EVE_checkpoints_I4EPC4.zip |
+| P0DTC2 (pre2020 sequences only) |SARS-CoV-2         | Spike glycoprotein  | EVE_checkpoints_P0DTC2_full_pre2020.zip |
+| P0DTC2     |SARS-CoV-2         | Spike glycoprotein    | EVE_checkpoints_P0DTC2_full.zip |
+| Q2N0S5      | HIV-1       | Envelope glycoprotein gp160    | EVE_checkpoints_Q2N0S5.zip |
+| FUS_NIPAV    | Nipah virus   | Fusion glycoprotein F0  | EVE_checkpoints_FUS_NIPAV.zip |
+| GLYC_LASSJ   | Lassa virus  | Pre-glycoprotein polyprotein GP complex | EVE_checkpoints_GLYC_LASSJ.zip |
+| GLYCP_NIPAV   | Nipah virus  |  Glycoprotein G   | EVE_checkpoints_GLYCP_NIPAV.zip |
+
 
 ## Software requirements
 The entire codebase is written in python. The corresponding environment may be created via conda and the provided [requirements.txt](./requirements.txt) file as follows:
