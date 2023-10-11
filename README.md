@@ -1,6 +1,6 @@
 # EVEscape
 
-This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral escape"](https://www.biorxiv.org/content/10.1101/2022.07.21.501023v2). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
+This is the official code repository for the paper ["Learning from pre-pandemic data to forecast viral escape"](https://www.nature.com/articles/s41586-023-06617-0). This paper is a joint collaboration between the [Marks Lab](https://www.deboramarkslab.com/) and the [OATML group](https://oatml.cs.ox.ac.uk/).
 
 ## Overview
 EVEscape is a model that computes the predicted likelihood of a given viral protein variant to induce immune escape from antibodies. For each protein, EVEscape predicts escape from data sources available pre-pandemic: sequence likelihood predictions from broader viral evolution, antibody accessibility information from protein structures, and changes in binding interaction propensity from residue chemical properties.   
@@ -92,10 +92,12 @@ This project is available under the MIT license.
 ## Reference
 If you use this code, please cite the following paper:
 
-Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins, Chris Sander, Yarin Gal, Debora S. Marks. Learning from pre-pandemic data to forecast viral escape. BioRxiv. 2023. 
+Nicole N. Thadani*, Sarah Gurev*, Pascal Notin*, Noor Youssef, Nathan J. Rollins, Daniel Ritter, Chris Sander, Yarin Gal, Debora S. Marks. Learning from pre-pandemic data to forecast viral escape. _Nature_. 2023. 
 
 (* equal contribution)
 
 Links:
- - Pre-print: https://www.biorxiv.org/content/10.1101/2022.07.21.501023v2
+ - Publication: https://www.nature.com/articles/s41586-023-06617-0
  - Website: https://www.evescape.org/
+
+See new work using EVEscape to design infectious Spike proteins that forecast future neutralizing antibody escape on [BioRxiv](https://www.biorxiv.org/content/10.1101/2023.10.08.561389v1).
